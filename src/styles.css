@@ -1,0 +1,22 @@
+:root { --bg:#0b0c10; --card:#111319; --text:#e6e6e6; --muted:#9aa0a6; --primary:#3da9fc; --danger:#ef476f; --ring:rgba(61,169,252,0.35); }
+*{ box-sizing:border-box } html,body,#root{ height:100% } body{ margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji'; background:linear-gradient(180deg,var(--bg),#13151e); color:var(--text) }
+.container{ max-width:720px; margin:0 auto; padding:1rem; display:grid; gap:1rem }
+header h1{ margin:0 0 .25rem 0 } .muted{ color:var(--muted) }
+.card{ background:var(--card); border:1px solid #20242f; border-radius:14px; padding:.75rem; box-shadow:0 4px 20px rgba(0,0,0,.2) }
+.row{ display:grid; grid-template-columns:1fr auto; gap:.5rem }
+.input{ width:100%; padding:.75rem .9rem; border-radius:12px; border:1px solid #2a2f3c; background:#0e1016; color:var(--text); outline:none }
+.input:focus{ border-color:var(--primary); box-shadow:0 0 0 4px var(--ring) }
+.label{ display:block; margin-bottom:.35rem; font-weight:600 }
+.btn{ padding:.75rem 1rem; border-radius:12px; border:1px solid #2a2f3c; background:#0e1016; color:var(--text); cursor:pointer }
+.btn:hover{ background:#151826 } .btn:focus{ outline:3px solid var(--ring) }
+.filters{ display:flex; gap:.5rem; flex-wrap:wrap }
+.pill{ border-radius:999px; padding:.5rem .9rem; border:1px solid #2a2f3c; background:#0e1016; color:var(--text); cursor:pointer }
+.pill.active{ border-color:var(--primary); box-shadow:0 0 0 3px var(--ring) }
+.list{ list-style:none; padding:0; margin:0; display:grid; gap:.5rem }
+.todo{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:.75rem; padding:.75rem .9rem; background:var(--card); border:1px solid #20242f; border-radius:12px }
+.todo input[type="checkbox"]{ width:1.2rem; height:1.2rem }
+.todo .done{ text-decoration:line-through; color:var(--muted) }
+.icon{ border-radius:10px; border:1px solid #2a2f3c; background:#0e1016; color:var(--text); cursor:pointer; width:2rem; height:2rem; line-height:1.8rem; text-align:center; font-size:1.25rem }
+.icon:hover{ background:#161a27 } .icon.danger{ color:var(--danger); border-color:#3b1d28 }
+.assistive{ font-size:.85rem; color:var(--muted); margin-top:.35rem } .error{ margin-top:.5rem; color:#ffb3c1 }
+@media (max-width:520px){ .row{ grid-template-columns:1fr } }
